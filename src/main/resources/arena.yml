@@ -1,0 +1,41 @@
+name: "Arena"
+game_time: 300
+lobby_time: 30
+min_players: 2
+max_players: 4
+spawns:
+  lobby:
+    world: world
+    x: 0
+    y: 0
+    z: 0
+    yaw: 0
+    pitch: 0
+  1:
+    world: world
+    x: 0
+    y: 0
+    z: 0
+    yaw: 0
+    pitch: 0
+  2:
+    world: world
+    x: 0
+    y: 0
+    z: 0
+    yaw: 0
+    pitch: 0
+  3:
+    world: world
+    x: 0
+    y: 0
+    z: 0
+    yaw: 0
+    pitch: 0
+  4:
+    world: world
+    x: 0
+    y: 0
+    z: 0
+    yaw: 0
+    pitch: 0
