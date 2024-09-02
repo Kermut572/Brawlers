@@ -25,35 +25,35 @@ public class Arena {
     public Arena(GameManager gameManager){
 
         this.name = gameManager.getPlugin().getArenaConfig().getString("name");
-        this.maxPlayers = gameManager.getPlugin().getArenaConfig().getInt("maxPlayers");
-        this.minPlayers = gameManager.getPlugin().getArenaConfig().getInt("minPlayers");
-        this.time = gameManager.getPlugin().getArenaConfig().getInt("time");
-        this.lobbyTime = gameManager.getPlugin().getArenaConfig().getInt("lobbyTime");
-        this.lobby = new Location(Bukkit.getWorld(Objects.requireNonNull(gameManager.getPlugin().getArenaConfig().getString("lobby.world"))),
+        this.maxPlayers = gameManager.getPlugin().getArenaConfig().getInt("max_players");
+        this.minPlayers = gameManager.getPlugin().getArenaConfig().getInt("min_players");
+        this.time = gameManager.getPlugin().getArenaConfig().getInt("game_time");
+        this.lobbyTime = gameManager.getPlugin().getArenaConfig().getInt("lobby_time");
+        this.lobby = new Location(Bukkit.getWorld(Objects.requireNonNull(gameManager.getPlugin().getArenaConfig().getString("spawns.lobby.world"))),
                 gameManager.getPlugin().getArenaConfig().getDouble("lobby.x"),
                 gameManager.getPlugin().getArenaConfig().getDouble("lobby.y"),
                 gameManager.getPlugin().getArenaConfig().getDouble("lobby.z"),
                 (float) gameManager.getPlugin().getArenaConfig().getDouble("lobby.yaw"),
                 (float) gameManager.getPlugin().getArenaConfig().getDouble("lobby.pitch"));
-        this.spawn_1 = new Location(Bukkit.getWorld(Objects.requireNonNull(gameManager.getPlugin().getArenaConfig().getString("1.world"))),
+        this.spawn_1 = new Location(Bukkit.getWorld(Objects.requireNonNull(gameManager.getPlugin().getArenaConfig().getString("spawns.1.world"))),
                 gameManager.getPlugin().getArenaConfig().getDouble("1.x"),
                 gameManager.getPlugin().getArenaConfig().getDouble("1.y"),
                 gameManager.getPlugin().getArenaConfig().getDouble("1.z"),
                 (float) gameManager.getPlugin().getArenaConfig().getDouble("1.yaw"),
                 (float) gameManager.getPlugin().getArenaConfig().getDouble("1.pitch"));
-        this.spawn_2 = new Location(Bukkit.getWorld(Objects.requireNonNull(gameManager.getPlugin().getArenaConfig().getString("2.world"))),
+        this.spawn_2 = new Location(Bukkit.getWorld(Objects.requireNonNull(gameManager.getPlugin().getArenaConfig().getString("spawns.2.world"))),
                 gameManager.getPlugin().getArenaConfig().getDouble("2.x"),
                 gameManager.getPlugin().getArenaConfig().getDouble("2.y"),
                 gameManager.getPlugin().getArenaConfig().getDouble("2.z"),
                 (float) gameManager.getPlugin().getArenaConfig().getDouble("2.yaw"),
                 (float) gameManager.getPlugin().getArenaConfig().getDouble("2.pitch"));
-        this.spawn_3 = new Location(Bukkit.getWorld(Objects.requireNonNull(gameManager.getPlugin().getArenaConfig().getString("3.world"))),
+        this.spawn_3 = new Location(Bukkit.getWorld(Objects.requireNonNull(gameManager.getPlugin().getArenaConfig().getString("spawns.3.world"))),
                 gameManager.getPlugin().getArenaConfig().getDouble("3.x"),
                 gameManager.getPlugin().getArenaConfig().getDouble("3.y"),
                 gameManager.getPlugin().getArenaConfig().getDouble("3.z"),
                 (float) gameManager.getPlugin().getArenaConfig().getDouble("3.yaw"),
                 (float) gameManager.getPlugin().getArenaConfig().getDouble("3.pitch"));
-        this.spawn_4 = new Location(Bukkit.getWorld(Objects.requireNonNull(gameManager.getPlugin().getArenaConfig().getString("4.world"))),
+        this.spawn_4 = new Location(Bukkit.getWorld(Objects.requireNonNull(gameManager.getPlugin().getArenaConfig().getString("spawns.4.world"))),
                 gameManager.getPlugin().getArenaConfig().getDouble("4.x"),
                 gameManager.getPlugin().getArenaConfig().getDouble("4.y"),
                 gameManager.getPlugin().getArenaConfig().getDouble("4.z"),
