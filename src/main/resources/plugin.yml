@@ -1,0 +1,6 @@
+name: Brawlers
+version: '0.1'
+main: io.github.kermut572.brawlers.Brawlers
+api-version: '1.21'
+prefix: Brawlers
+authors: [ Kermut572 ]
