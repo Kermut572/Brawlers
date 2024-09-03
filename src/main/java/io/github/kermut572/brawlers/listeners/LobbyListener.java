@@ -25,6 +25,7 @@ public class LobbyListener implements Listener {
             return;
         }
         e.getPlayer().setGameMode(GameMode.ADVENTURE);
+        e.getPlayer().teleport(gameManager.getArena().getLobby());
         gameManager.getPlayerManager().addPlayer(new BrawlPlayer(e.getPlayer()));
 
         if(gameManager.getPlayerManager().getPlayers().size() >= gameManager.getArena().getMinPlayers() && gameManager.getGameState() == GameState.LOBBY){

@@ -1,5 +1,6 @@
 package io.github.kermut572.brawlers;
 
+import io.github.kermut572.brawlers.listeners.DamageListener;
 import io.github.kermut572.brawlers.listeners.LobbyListener;
 import io.github.kermut572.brawlers.managers.GameManager;
 import org.bukkit.configuration.file.FileConfiguration;
@@ -26,6 +27,7 @@ public final class Brawlers extends JavaPlugin {
         }
         plugin.gameManager = new GameManager(plugin);
         getServer().getPluginManager().registerEvents(new LobbyListener(gameManager), plugin);
+        getServer().getPluginManager().registerEvents(new DamageListener(gameManager), plugin);
         new BukkitRunnable() {
             @Override
             public void run() {

@@ -30,35 +30,35 @@ public class Arena {
         this.time = gameManager.getPlugin().getArenaConfig().getInt("game_time");
         this.lobbyTime = gameManager.getPlugin().getArenaConfig().getInt("lobby_time");
         this.lobby = new Location(Bukkit.getWorld(Objects.requireNonNull(gameManager.getPlugin().getArenaConfig().getString("spawns.lobby.world"))),
-                gameManager.getPlugin().getArenaConfig().getDouble("lobby.x"),
-                gameManager.getPlugin().getArenaConfig().getDouble("lobby.y"),
-                gameManager.getPlugin().getArenaConfig().getDouble("lobby.z"),
-                (float) gameManager.getPlugin().getArenaConfig().getDouble("lobby.yaw"),
-                (float) gameManager.getPlugin().getArenaConfig().getDouble("lobby.pitch"));
+                gameManager.getPlugin().getArenaConfig().getDouble("spawns.lobby.x"),
+                gameManager.getPlugin().getArenaConfig().getDouble("spawns.lobby.y"),
+                gameManager.getPlugin().getArenaConfig().getDouble("spawns.lobby.z"),
+                (float) gameManager.getPlugin().getArenaConfig().getDouble("spawns.lobby.yaw"),
+                (float) gameManager.getPlugin().getArenaConfig().getDouble("spawns.lobby.pitch"));
         this.spawn_1 = new Location(Bukkit.getWorld(Objects.requireNonNull(gameManager.getPlugin().getArenaConfig().getString("spawns.1.world"))),
-                gameManager.getPlugin().getArenaConfig().getDouble("1.x"),
-                gameManager.getPlugin().getArenaConfig().getDouble("1.y"),
-                gameManager.getPlugin().getArenaConfig().getDouble("1.z"),
-                (float) gameManager.getPlugin().getArenaConfig().getDouble("1.yaw"),
-                (float) gameManager.getPlugin().getArenaConfig().getDouble("1.pitch"));
+                gameManager.getPlugin().getArenaConfig().getDouble("spawns.1.x"),
+                gameManager.getPlugin().getArenaConfig().getDouble("spawns.1.y"),
+                gameManager.getPlugin().getArenaConfig().getDouble("spawns.1.z"),
+                (float) gameManager.getPlugin().getArenaConfig().getDouble("spawns.1.yaw"),
+                (float) gameManager.getPlugin().getArenaConfig().getDouble("spawns.1.pitch"));
         this.spawn_2 = new Location(Bukkit.getWorld(Objects.requireNonNull(gameManager.getPlugin().getArenaConfig().getString("spawns.2.world"))),
-                gameManager.getPlugin().getArenaConfig().getDouble("2.x"),
-                gameManager.getPlugin().getArenaConfig().getDouble("2.y"),
-                gameManager.getPlugin().getArenaConfig().getDouble("2.z"),
-                (float) gameManager.getPlugin().getArenaConfig().getDouble("2.yaw"),
-                (float) gameManager.getPlugin().getArenaConfig().getDouble("2.pitch"));
+                gameManager.getPlugin().getArenaConfig().getDouble("spawns.2.x"),
+                gameManager.getPlugin().getArenaConfig().getDouble("spawns.2.y"),
+                gameManager.getPlugin().getArenaConfig().getDouble("spawns.2.z"),
+                (float) gameManager.getPlugin().getArenaConfig().getDouble("spawns.2.yaw"),
+                (float) gameManager.getPlugin().getArenaConfig().getDouble("spawns.2.pitch"));
         this.spawn_3 = new Location(Bukkit.getWorld(Objects.requireNonNull(gameManager.getPlugin().getArenaConfig().getString("spawns.3.world"))),
-                gameManager.getPlugin().getArenaConfig().getDouble("3.x"),
-                gameManager.getPlugin().getArenaConfig().getDouble("3.y"),
-                gameManager.getPlugin().getArenaConfig().getDouble("3.z"),
-                (float) gameManager.getPlugin().getArenaConfig().getDouble("3.yaw"),
-                (float) gameManager.getPlugin().getArenaConfig().getDouble("3.pitch"));
+                gameManager.getPlugin().getArenaConfig().getDouble("spawns.3.x"),
+                gameManager.getPlugin().getArenaConfig().getDouble("spawns.3.y"),
+                gameManager.getPlugin().getArenaConfig().getDouble("spawns.3.z"),
+                (float) gameManager.getPlugin().getArenaConfig().getDouble("spawns.3.yaw"),
+                (float) gameManager.getPlugin().getArenaConfig().getDouble("spawns.3.pitch"));
         this.spawn_4 = new Location(Bukkit.getWorld(Objects.requireNonNull(gameManager.getPlugin().getArenaConfig().getString("spawns.4.world"))),
-                gameManager.getPlugin().getArenaConfig().getDouble("4.x"),
-                gameManager.getPlugin().getArenaConfig().getDouble("4.y"),
-                gameManager.getPlugin().getArenaConfig().getDouble("4.z"),
-                (float) gameManager.getPlugin().getArenaConfig().getDouble("4.yaw"),
-                (float) gameManager.getPlugin().getArenaConfig().getDouble("4.pitch"));
+                gameManager.getPlugin().getArenaConfig().getDouble("spawns.4.x"),
+                gameManager.getPlugin().getArenaConfig().getDouble("spawns.4.y"),
+                gameManager.getPlugin().getArenaConfig().getDouble("spawns.4.z"),
+                (float) gameManager.getPlugin().getArenaConfig().getDouble("spawns.4.yaw"),
+                (float) gameManager.getPlugin().getArenaConfig().getDouble("spawns.4.pitch"));
 
     }
 

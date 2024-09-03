@@ -3,6 +3,10 @@ package io.github.kermut572.brawlers.managers;
 import io.github.kermut572.brawlers.Arena;
 import io.github.kermut572.brawlers.Brawlers;
 import io.github.kermut572.brawlers.enums.GameState;
+import org.bukkit.Bukkit;
+import org.bukkit.ChatColor;
+import org.bukkit.World;
+import org.bukkit.entity.Player;
 
 public class GameManager {
 
@@ -34,6 +38,12 @@ public class GameManager {
     }
 
     public void setGameState(GameState gameState){
+        if(gameState == GameState.RESTARTING){
+            Player winner = playerManager.getPlayers().values().iterator().next().getPlayer();
+            Bukkit.getServer().broadcastMessage(ChatColor.GOLD + winner.getDisplayName() + " has won the game!");
+            Bukkit.getServer().broadcastMessage(ChatColor.GREEN + "Game restarting in 10 seconds");
+            Bukkit.getLogger().log(java.util.logging.Level.INFO, "Launch task to restart here");
+        }
         this.gameState = gameState;
     }
 
