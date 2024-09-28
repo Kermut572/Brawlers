@@ -3,6 +3,7 @@ package io.github.kermut572.brawlers.listeners;
 import io.github.kermut572.brawlers.BrawlPlayer;
 import io.github.kermut572.brawlers.enums.GameState;
 import io.github.kermut572.brawlers.managers.GameManager;
+import org.bukkit.GameMode;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -58,6 +59,10 @@ public class DamageListener implements Listener{
         if(e.getEntity() instanceof Player damaged && (e.getCause() == EntityDamageEvent.DamageCause.LAVA || e.getCause() == EntityDamageEvent.DamageCause.VOID)){
             e.setDamage(0);
             e.setCancelled(true);
+
+            if(((Player) e.getEntity()).getGameMode() != GameMode.ADVENTURE){
+                return;
+            }
 
             BrawlPlayer damagedPlayer = gameManager.getPlayerManager().getPlayer(damaged.getDisplayName());
             gameManager.getPlayerManager().killPlayer(damagedPlayer);

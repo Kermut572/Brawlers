@@ -11,18 +11,22 @@ public class Arena {
 
     private String name;
 
+    private GameManager gameManager;
+
     private final int maxPlayers;
     private final int minPlayers;
     private final int time;
     private final int lobbyTime;
 
-    private final Location lobby;
-    private final Location spawn_1;
-    private final Location spawn_2;
-    private final Location spawn_3;
-    private final Location spawn_4;
+    private Location lobby;
+    private Location spawn_1;
+    private Location spawn_2;
+    private Location spawn_3;
+    private Location spawn_4;
 
     public Arena(GameManager gameManager){
+
+        this.gameManager = gameManager;
 
         this.name = gameManager.getPlugin().getArenaConfig().getString("name");
         this.maxPlayers = gameManager.getPlugin().getArenaConfig().getInt("max_players");
@@ -100,6 +104,66 @@ public class Arena {
 
     public Location getSpawn4(){
         return spawn_4;
+    }
+
+    public void setLobby(Location lobby){
+        this.lobby = lobby;
+
+        gameManager.getPlugin().getArenaConfig().set("spawns.lobby.world", lobby.getWorld().getName());
+        gameManager.getPlugin().getArenaConfig().set("spawns.lobby.x", lobby.getX());
+        gameManager.getPlugin().getArenaConfig().set("spawns.lobby.y", lobby.getY());
+        gameManager.getPlugin().getArenaConfig().set("spawns.lobby.z", lobby.getZ());
+        gameManager.getPlugin().getArenaConfig().set("spawns.lobby.yaw", lobby.getYaw());
+        gameManager.getPlugin().getArenaConfig().set("spawns.lobby.pitch", lobby.getPitch());
+        gameManager.getPlugin().saveArenaConfig();
+    }
+
+    public void setSpawn1(Location spawn_1){
+        this.spawn_1 = spawn_1;
+
+        gameManager.getPlugin().getArenaConfig().set("spawns.1.world", spawn_1.getWorld().getName());
+        gameManager.getPlugin().getArenaConfig().set("spawns.1.x", spawn_1.getX());
+        gameManager.getPlugin().getArenaConfig().set("spawns.1.y", spawn_1.getY());
+        gameManager.getPlugin().getArenaConfig().set("spawns.1.z", spawn_1.getZ());
+        gameManager.getPlugin().getArenaConfig().set("spawns.1.yaw", spawn_1.getYaw());
+        gameManager.getPlugin().getArenaConfig().set("spawns.1.pitch", spawn_1.getPitch());
+        gameManager.getPlugin().saveArenaConfig();
+    }
+
+    public void setSpawn2(Location spawn_2){
+        this.spawn_2 = spawn_2;
+
+        gameManager.getPlugin().getArenaConfig().set("spawns.2.world", spawn_2.getWorld().getName());
+        gameManager.getPlugin().getArenaConfig().set("spawns.2.x", spawn_2.getX());
+        gameManager.getPlugin().getArenaConfig().set("spawns.2.y", spawn_2.getY());
+        gameManager.getPlugin().getArenaConfig().set("spawns.2.z", spawn_2.getZ());
+        gameManager.getPlugin().getArenaConfig().set("spawns.2.yaw", spawn_2.getYaw());
+        gameManager.getPlugin().getArenaConfig().set("spawns.2.pitch", spawn_2.getPitch());
+        gameManager.getPlugin().saveArenaConfig();
+    }
+
+    public void setSpawn3(Location spawn_3){
+        this.spawn_3 = spawn_3;
+
+        gameManager.getPlugin().getArenaConfig().set("spawns.3.world", spawn_3.getWorld().getName());
+        gameManager.getPlugin().getArenaConfig().set("spawns.3.x", spawn_3.getX());
+        gameManager.getPlugin().getArenaConfig().set("spawns.3.y", spawn_3.getY());
+        gameManager.getPlugin().getArenaConfig().set("spawns.3.z", spawn_3.getZ());
+        gameManager.getPlugin().getArenaConfig().set("spawns.3.yaw", spawn_3.getYaw());
+        gameManager.getPlugin().getArenaConfig().set("spawns.3.pitch", spawn_3.getPitch());
+        gameManager.getPlugin().saveArenaConfig();
+    }
+
+    public void setSpawn4(Location spawn_4){
+        this.spawn_4 = spawn_4;
+
+        gameManager.getPlugin().getArenaConfig().set("spawns.4.world", spawn_4.getWorld().getName());
+        gameManager.getPlugin().getArenaConfig().set("spawns.4.x", spawn_4.getX());
+        gameManager.getPlugin().getArenaConfig().set("spawns.4.y", spawn_4.getY());
+        gameManager.getPlugin().getArenaConfig().set("spawns.4.z", spawn_4.getZ());
+        gameManager.getPlugin().getArenaConfig().set("spawns.4.yaw", spawn_4.getYaw());
+        gameManager.getPlugin().getArenaConfig().set("spawns.4.pitch", spawn_4.getPitch());
+        gameManager.getPlugin().saveArenaConfig();
     }
 
     public List<Location> getSpawns() {

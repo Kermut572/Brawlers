@@ -2,6 +2,7 @@ package io.github.kermut572.brawlers.managers;
 
 import io.github.kermut572.brawlers.BrawlPlayer;
 import io.github.kermut572.brawlers.enums.GameState;
+import io.github.kermut572.brawlers.runnables.RespawnPlayer;
 import org.bukkit.GameMode;
 import org.bukkit.entity.Player;
 
@@ -37,36 +38,24 @@ public class PlayerManager {
     public void killPlayer(BrawlPlayer player){
         player.setLives(player.getLives() - 1);
         player.setDamageTaken(0);
+        player.getPlayer().setGameMode(GameMode.SPECTATOR);
         if(player.getLives() <= 0){
             players.remove(player.getPlayer().getDisplayName());
-            player.getPlayer().setGameMode(GameMode.SPECTATOR);
-
             if(players.size() == 1){
                 gameManager.setGameState(GameState.RESTARTING);
             }
-
+            return;
         }
 
         Player p = player.getPlayer();
         p.setFireTicks(0);
+        RespawnPlayer respawnPlayer = new RespawnPlayer(gameManager, p);
+        respawnPlayer.runTaskTimer(gameManager.getPlugin(), 0, 20);
 
-        int randInt = ThreadLocalRandom.current().nextInt(0, 4);
-        switch (randInt){
-            case 0:
-                p.teleport(gameManager.getArena().getSpawn1());
-                break;
-            case 1:
-                p.teleport(gameManager.getArena().getSpawn2());
-                break;
-            case 2:
-                p.teleport(gameManager.getArena().getSpawn3());
-                break;
-            case 3:
-                p.teleport(gameManager.getArena().getSpawn4());
-                break;
-            default:
-                break;
-        }
+
     }
 
+    public void healPlayer(BrawlPlayer p, int amount) {
+        p.setDamageTaken(Math.clamp(p.getDamageTaken() - amount, 0, Integer.MAX_VALUE));
+    }
 }

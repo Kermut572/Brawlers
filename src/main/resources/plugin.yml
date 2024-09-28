@@ -4,3 +4,9 @@ main: io.github.kermut572.brawlers.Brawlers
 api-version: '1.21'
 prefix: Brawlers
 authors: [ Kermut572 ]
+
+commands:
+  setpoint:
+    description: Set the specified location for the game
+    usage: /setpoint <1-4/lobby>
+    permission: brawlers.setpoint

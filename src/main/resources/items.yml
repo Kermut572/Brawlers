@@ -1,0 +1,13 @@
+items:
+  0:
+    item_type: "diamond_sword"
+    effect: DAMAGE
+    amount: 5
+  1:
+    item_type: "apple"
+    effect: HEAL
+    amount: 5
+  2:
+    item_type: "iron_chestplate"
+    effect: ARMOR
+    amount: 5
