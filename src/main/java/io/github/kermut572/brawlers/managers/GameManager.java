@@ -1,13 +1,12 @@
 package io.github.kermut572.brawlers.managers;
 
-import io.github.kermut572.brawlers.Arena;
+import io.github.kermut572.brawlers.gameobjects.Arena;
 import io.github.kermut572.brawlers.Brawlers;
 import io.github.kermut572.brawlers.enums.GameState;
 import io.github.kermut572.brawlers.runnables.RestartServer;
 import io.github.kermut572.brawlers.runnables.SpawnItem;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
-import org.bukkit.World;
 import org.bukkit.entity.Player;
 
 public class GameManager {

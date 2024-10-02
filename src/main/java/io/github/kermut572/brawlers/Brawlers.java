@@ -1,6 +1,7 @@
 package io.github.kermut572.brawlers;
 
 import io.github.kermut572.brawlers.commands.SetPointCommand;
+import io.github.kermut572.brawlers.gameobjects.Arena;
 import io.github.kermut572.brawlers.listeners.BrawlItemListener;
 import io.github.kermut572.brawlers.listeners.DamageListener;
 import io.github.kermut572.brawlers.listeners.LobbyListener;
@@ -11,6 +12,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 import org.bukkit.scheduler.BukkitRunnable;
 
 import java.io.File;
+import java.util.logging.Logger;
 
 public final class Brawlers extends JavaPlugin {
 
@@ -26,6 +28,8 @@ public final class Brawlers extends JavaPlugin {
     @Override
     public void onEnable() {
         plugin = this;
+
+        //TODO on the first enable, the arena cannot be parsed from the config file. Fix so it doesn't break the plugin
         if(!arenaFile.exists()){
             saveResource("arena.yml", false);
         }
@@ -69,7 +73,7 @@ public final class Brawlers extends JavaPlugin {
         try {
             arenaConfig.save(arenaFile);
         } catch (Exception e) {
-            e.printStackTrace();
+            Logger.getLogger("Minecraft").info("Could not save arena config");
         }
     }
 }

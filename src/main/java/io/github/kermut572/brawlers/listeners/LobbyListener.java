@@ -1,6 +1,6 @@
 package io.github.kermut572.brawlers.listeners;
 
-import io.github.kermut572.brawlers.BrawlPlayer;
+import io.github.kermut572.brawlers.gameobjects.BrawlPlayer;
 import io.github.kermut572.brawlers.enums.GameState;
 import io.github.kermut572.brawlers.managers.GameManager;
 import io.github.kermut572.brawlers.runnables.StartArena;

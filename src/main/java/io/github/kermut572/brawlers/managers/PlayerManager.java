@@ -1,13 +1,12 @@
 package io.github.kermut572.brawlers.managers;
 
-import io.github.kermut572.brawlers.BrawlPlayer;
+import io.github.kermut572.brawlers.gameobjects.BrawlPlayer;
 import io.github.kermut572.brawlers.enums.GameState;
 import io.github.kermut572.brawlers.runnables.RespawnPlayer;
 import org.bukkit.GameMode;
 import org.bukkit.entity.Player;
 
 import java.util.HashMap;
-import java.util.concurrent.ThreadLocalRandom;
 
 public class PlayerManager {
 

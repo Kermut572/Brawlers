@@ -1,14 +1,12 @@
 package io.github.kermut572.brawlers.runnables;
 
-import io.github.kermut572.brawlers.BrawlerItem;
-import io.github.kermut572.brawlers.enums.BrawlItem;
+import io.github.kermut572.brawlers.gameobjects.BrawlerItem;
 import io.github.kermut572.brawlers.enums.GameState;
 import io.github.kermut572.brawlers.managers.GameManager;
 import org.bukkit.scheduler.BukkitRunnable;
 
 import java.util.ArrayList;
 import java.util.concurrent.ThreadLocalRandom;
-import java.util.logging.Logger;
 
 public class SpawnItem extends BukkitRunnable {
 
@@ -27,9 +25,9 @@ public class SpawnItem extends BukkitRunnable {
             return;
         }
 
-        Logger logger = gameManager.getPlugin().getLogger();
-        logger.log(java.util.logging.Level.INFO, "Spawning item? Current items: " + items.size());
-        logger.log(java.util.logging.Level.INFO, "Max items: " + gameManager.getBrawlItemManager().getMaxItems());
+        //Logger logger = gameManager.getPlugin().getLogger();
+        //logger.log(java.util.logging.Level.INFO, "Spawning item? Current items: " + items.size());
+        //logger.log(java.util.logging.Level.INFO, "Max items: " + gameManager.getBrawlItemManager().getMaxItems());
         if(items.size() >= gameManager.getBrawlItemManager().getMaxItems()){
             return;
         }

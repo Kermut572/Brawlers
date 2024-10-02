@@ -1,7 +1,6 @@
 package io.github.kermut572.brawlers.runnables;
 
-import io.github.kermut572.brawlers.BrawlerItem;
-import io.github.kermut572.brawlers.enums.BrawlItem;
+import io.github.kermut572.brawlers.gameobjects.BrawlerItem;
 import io.github.kermut572.brawlers.managers.GameManager;
 import org.bukkit.entity.Player;
 import org.bukkit.scheduler.BukkitRunnable;

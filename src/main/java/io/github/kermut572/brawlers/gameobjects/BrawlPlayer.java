@@ -1,10 +1,7 @@
-package io.github.kermut572.brawlers;
+package io.github.kermut572.brawlers.gameobjects;
 
-import org.bukkit.Location;
 import org.bukkit.entity.Player;
 import org.bukkit.util.Vector;
-
-import java.util.concurrent.ThreadLocalRandom;
 
 public class BrawlPlayer {
 

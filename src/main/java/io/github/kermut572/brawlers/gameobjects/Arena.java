@@ -1,4 +1,4 @@
-package io.github.kermut572.brawlers;
+package io.github.kermut572.brawlers.gameobjects;
 
 import io.github.kermut572.brawlers.managers.GameManager;
 import org.bukkit.Bukkit;
@@ -9,9 +9,9 @@ import java.util.Objects;
 
 public class Arena {
 
-    private String name;
+    private final String name;
 
-    private GameManager gameManager;
+    private final GameManager gameManager;
 
     private final int maxPlayers;
     private final int minPlayers;
@@ -23,6 +23,8 @@ public class Arena {
     private Location spawn_2;
     private Location spawn_3;
     private Location spawn_4;
+
+    //TODO This whole class is trash, REWORK
 
     public Arena(GameManager gameManager){
 
@@ -90,6 +92,7 @@ public class Arena {
         return lobby;
     }
 
+    //Rework so it is not as hardcoded
     public Location getSpawn1(){
         return spawn_1;
     }

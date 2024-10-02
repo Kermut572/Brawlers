@@ -1,20 +1,19 @@
 package io.github.kermut572.brawlers.managers;
 
-import io.github.kermut572.brawlers.BrawlerItem;
-import io.github.kermut572.brawlers.enums.BrawlItem;
+import io.github.kermut572.brawlers.gameobjects.BrawlerItem;
+import io.github.kermut572.brawlers.enums.BrawlItemType;
 import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.inventory.ItemStack;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 import java.util.logging.Logger;
 
 public class BrawlItemManager {
 
-    private GameManager gameManager;
+    private final GameManager gameManager;
     private final Map<ItemStack, BrawlerItem> items;
     private final ArrayList<BrawlerItem> spawnedItems = new ArrayList<>();
     private final int maxItems = 5;
@@ -56,7 +55,7 @@ public class BrawlItemManager {
         return items.get(item);
     }
 
-    public Map getItems(){
+    public Map<ItemStack, BrawlerItem> getItems(){
         return items;
     }
 
@@ -69,7 +68,7 @@ public class BrawlItemManager {
             @SuppressWarnings("ConstantConditions")
             ItemStack itemStack = new ItemStack(Material.getMaterial(gameManager.getPlugin().getItemConfig().getString("items." + item + ".item_type").toUpperCase()));
             BrawlerItem brawlItem = new BrawlerItem(itemStack,
-                    BrawlItem.getBrawlItem(gameManager.getPlugin().getItemConfig().getString("items." + item + ".effect")),
+                    BrawlItemType.getBrawlItem(gameManager.getPlugin().getItemConfig().getString("items." + item + ".effect")),
                     gameManager.getPlugin().getItemConfig().getInt("items." + item + ".amount"));
 
             addItem(brawlItem);
